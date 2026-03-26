@@ -1,0 +1,258 @@
+body {
+  font-family:
+    Open Sans,
+    sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+}
+
+h1,
+h2 {
+  font-family: Poppins, sans-serif;
+}
+
+.container {
+  padding: 8px;
+  display: grid;
+  justify-content: center;
+}
+
+:root {
+  /* color pallet */
+  --knapper_highlights: #ffb6c1;
+  --sektioner: #cdb4db;
+  --background: #bde0fe;
+  --tekst: #4a2c2a;
+  --hover: #ffd166;
+  --offcan: #fff8f0;
+}
+
+.burger-offcanvas {
+  position: fixed;
+  left: -9000px; /* overdrivelse fremmer forståelse.     kunne have været -300px istedet for.(fordi af en eller anden grund skal den bruge en ekstra 50px) */
+  transition: left 0.6s cubic-bezier(0.61, 1, 0.88, 1); /* Gør animationen glidende med en "bounce" effekt fra Ease*/
+  padding: 20px;
+  height: 100%;
+  width: 250px;
+  background-color: var(--offcan);
+}
+
+.burger-offcanvas.show {
+  left: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-areas:
+      "start-card"
+      "opening"
+      "menus"
+      "order";
+  }
+
+  .start-card {
+    grid-area: start-card;
+  }
+
+  .opening {
+    grid-area: opening;
+  }
+
+  .menu {
+    grid-area: menus;
+  }
+
+  .order {
+    grid-area: order;
+  }
+}
+header {
+  background-color: var(--sektioner);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+}
+.start-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sektioner);
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.opening {
+  background-color: var(--sektioner);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.open {
+  display: none;
+}
+
+.closed {
+  display: none;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--knapper_highlights);
+  width: 200px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta a {
+  text-decoration: none;
+  color: var(--tekst);
+}
+
+.card {
+  background-color: var(--sektioner);
+  display: none;
+  grid-area: card;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu {
+  display: grid;
+  grid-template-areas: "card";
+  margin-bottom: 32px;
+}
+
+.slide {
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--sektioner);
+  margin-bottom: 32px;
+}
+
+.overlay {
+  display: none;
+  background-color: var(--hover);
+  position: fixed;
+
+  inset: 0;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sektioner);
+}
+
+.th {
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--sektioner);
+  border: var(--background);
+  margin-bottom: 32px;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.cta:hover {
+  background-color: var(--hover);
+  cursor: pointer;
+}
+
+.th {
+  display: none;
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.th.show {
+  display: flex;
+}
+
+.th > div {
+  background-color: var(--offcan);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.order-button {
+  background-color: var(--knapper_highlights);
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "start-card opening"
+      "menus menus"
+      "order order"
+      "th th";
+
+    gap: 32px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .start-card {
+    grid-area: start-card;
+    width: 100%;
+  }
+
+  .opening {
+    grid-area: opening;
+  }
+
+  .menu {
+    grid-area: menus;
+  }
+
+  .order {
+    grid-area: order;
+  }
+
+  .th {
+    grid-area: th;
+  }
+}
+@media screen and (min-width: 900px) {
+  .menu {
+    display: grid;
+    justify-content: center;
+  }
+
+  .card {
+    width: 400px;
+    margin: auto;
+  }
+}
