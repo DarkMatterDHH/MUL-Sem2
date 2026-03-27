@@ -135,6 +135,11 @@ header {
   display: block;
 }
 
+img {
+  height: 300px;
+  margin-top: 8px;
+}
+
 .buttons {
   display: flex;
   justify-content: space-evenly;
