@@ -1,22 +1,35 @@
+/* MAIN PAGE GRID LAYOUT */
 body {
   display: grid;
+
+  /* Page structure:
+     - header at top
+     - video section in middle
+     - text section at bottom */
   grid-template-areas:
     "header"
     "vid"
     "text";
 }
 
+/* HEADER POSITION */
 header {
   grid-area: header;
 }
 
+/* VIDEO POSITION */
 video {
   grid-area: vid;
 }
 
+/* HERO TEXT BLOCK */
 .main-text {
   grid-area: text;
+
+  /* Stack text elements vertically */
   display: flex;
   flex-direction: column;
+
+  /* Space between heading and paragraph */
   gap: 20px;
 }

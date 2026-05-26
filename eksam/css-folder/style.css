@@ -1,14 +1,17 @@
+/* Removes default margin and padding from all elements */
 * {
   padding: 0;
   margin: 0;
 }
 
+/* Main page styling */
 body {
   padding: 0 20px 0 20px;
   font-family: "manrope", sans-serif;
   background-color: var(--baggrund);
 }
 
+/* Shared font and text color for buttons, links and headings */
 button,
 a,
 h1,
@@ -18,6 +21,7 @@ h3 {
   color: var(--Accent);
 }
 
+/* CSS variables (color palette) */
 :root {
   --Primær: #1e2a38;
   --Secundær: #7c3aed;
@@ -25,6 +29,7 @@ h3 {
   --baggrund: #f8fafc;
 }
 
+/* Header layout */
 header {
   display: flex;
   justify-content: space-between;
@@ -34,11 +39,13 @@ header {
   padding: 20px;
 }
 
+/* Header links */
 header a {
   color: var(--Accent);
   text-decoration: none;
 }
 
+/* Burger menu container */
 .burger {
   display: flex;
   flex-direction: column;
@@ -47,6 +54,7 @@ header a {
   cursor: pointer;
 }
 
+/* Exercise menu layout */
 .ovelse {
   display: flex;
   flex-direction: column;
@@ -54,22 +62,26 @@ header a {
   margin-top: 20px;
 }
 
+/* Rotates arrow icon */
 .arrow {
   rotate: 90deg left;
 }
 
+/* Hidden menu state */
 .off-screen {
   position: absolute;
   right: -9999px;
   display: none;
 }
 
+/* Visible menu state */
 .on-screen {
   position: absolute;
   right: 60px;
   display: block;
 }
 
+/* Exercise dropdown styling when visible */
 .oevelser.on-screen {
   position: absolute;
   top: 215px;
@@ -79,6 +91,7 @@ header a {
   border-radius: 10px;
 }
 
+/* Burger menu styling */
 .burger {
   background-color: var(--Primær);
   width: 86px;
@@ -86,6 +99,7 @@ header a {
   top: 140px;
 }
 
+/* Exercise links and list styling */
 .ovelser a,
 .oevelser ul,
 .oevelser p {
@@ -97,6 +111,7 @@ header a {
   color: var(--Accent);
 }
 
+/* Burger menu links and text styling */
 .burger a,
 .burger ul,
 .burger p {
@@ -108,6 +123,7 @@ header a {
   color: var(--Accent);
 }
 
+/* Burger menu button styling */
 .menu {
   background-color: transparent;
   border: none;
@@ -115,52 +131,71 @@ header a {
   display: flex;
   padding: 0;
 }
+
+/* Burger menu lines */
 .line {
   fill: none;
   stroke: var(--Accent);
   stroke-width: 6;
+
   transition:
     stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
     stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Top burger line */
 .line1 {
   stroke-dasharray: 60 207;
   stroke-width: 6;
 }
+
+/* Middle burger line */
 .line2 {
   stroke-dasharray: 60 60;
   stroke-width: 6;
 }
+
+/* Bottom burger line */
 .line3 {
   stroke-dasharray: 60 207;
   stroke-width: 6;
 }
+
+/* Animation for opened burger menu */
 .opened .line1 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
 }
+
+/* Middle line animation when menu opens */
 .opened .line2 {
   stroke-dasharray: 1 60;
   stroke-dashoffset: -30;
   stroke-width: 6;
 }
+
+/* Bottom line animation when menu opens */
 .opened .line3 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
 }
 
+/* Paragraph text color */
 p {
   color: var(--Secundær);
 }
 
-/* index */
+/* INDEX PAGE */
+
+/* Responsive video */
 video {
   width: 100%;
   height: auto;
 }
 
+/* Main text section layout */
 .main-text {
   display: flex;
   flex-direction: column;
@@ -169,4 +204,4 @@ video {
   gap: 20px;
 }
 
-/* oevelser */
+/* OEVELSER PAGE */

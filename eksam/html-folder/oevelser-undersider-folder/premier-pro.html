@@ -1,112 +1,206 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Basic page setup -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS stylesheets -->
     <link rel="stylesheet" href="../../css-folder/style.css" />
     <link rel="stylesheet" href="../../css-folder/oevelser-undersider.css" />
     <link rel="stylesheet" href="../../css-folder/quiz.css" />
+
+    <!-- JavaScript files -->
     <script src="../../js-folder/script.js" defer></script>
     <script src="js-quiz/quiz.js" defer></script>
+
     <title>Premier Pro</title>
   </head>
+
   <body>
+
+    <!-- HEADER SECTION -->
     <header>
-        <a href="../../index.html"><div><img src="#" alt=""><h3>HOW TO BE <BR>MULTIMEDIEDESIGNER</BR></h3></div></a>
-        <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+
+      <!-- Logo / home link -->
+      <a href="../../index.html">
+        <div>
+          <img src="#" alt="">
+          <h3>
+            HOW TO BE <br>
+            MULTIMEDIEDESIGNER
+          </h3>
+        </div>
+      </a>
+
+      <!-- Burger menu button -->
+      <button 
+        class="menu" 
+        onclick="this.classList.toggle('opened');
+        this.setAttribute('aria-expanded', this.classList.contains('opened'))" 
+        aria-label="Main Menu">
+
+        <!-- Burger icon (SVG animation) -->
         <svg width="100" height="100" viewBox="0 0 100 100">
-        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-        <path class="line line2" d="M 20,50 H 80" />
-        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-      </svg>
-    </button>
+
+          <!-- Top line -->
+          <path class="line line1"
+            d="M 20,29.000046 H 80.000231 
+            C 80.000231,29.000046 94.498839,28.817352 
+            94.532987,66.711331 
+            94.543142,77.980673 90.966081,81.670246 
+            85.259173,81.668997 
+            79.552261,81.667751 75.000211,74.999942 
+            75.000211,74.999942 
+            L 25.000021,25.000058" />
+
+          <!-- Middle line -->
+          <path class="line line2" d="M 20,50 H 80" />
+
+          <!-- Bottom line -->
+          <path class="line line3"
+            d="M 20,70.999954 H 80.000231 
+            C 80.000231,70.999954 94.498839,71.182648 
+            94.532987,33.288669 
+            94.543142,22.019327 90.966081,18.329754 
+            85.259173,18.331003 
+            79.552261,18.332249 75.000211,25.000058 
+            75.000211,25.000058 
+            L 25.000021,74.999942" />
+
+        </svg>
+      </button>
+
     </header>
+
+    <!-- MOBILE / SIDE NAVIGATION -->
     <nav class="burger off-screen">
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <!-- arrow down symbol &#128899. arrow up symbol &#128897  -->
-                <li><a href="../oevelser.html">Øvelser</a><a class="arrow">&#128899</a></li>
-                <li><a href="../ord-bog.html">Ordbog</a></li>
-            </ul>
-        </nav>
-        <nav class="oevelser off-screen">
-            <ul>
-                <li><a href="photoshop.html">Photoshop</a></li>
-                <li><p>Premier Pro</p></li>
-                <li><a href="illustrator.html">Illustrator</a></li>
-                <li><a href="visual-code.html">Visual Code</a></li>
-            </ul>
-        </nav>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+          <a href="../oevelser.html">Øvelser</a>
+          <a class="arrow">&#128899</a>
+        </li>
+        <li><a href="../ord-bog.html">Ordbog</a></li>
+      </ul>
+    </nav>
+
+    <!-- SUB NAVIGATION (exercise categories) -->
+    <nav class="oevelser off-screen">
+      <ul>
+        <li><a href="photoshop.html">Photoshop</a></li>
+
+        <!-- Current active page -->
+        <li><p>Premier Pro</p></li>
+
+        <li><a href="illustrator.html">Illustrator</a></li>
+        <li><a href="visual-code.html">Visual Code</a></li>
+      </ul>
+    </nav>
+
+    <!-- PAGE TITLE -->
     <h2>Premier Pro</h2>
+
+    <!-- MAIN CONTENT -->
     <main>
+
+      <!-- Video section -->
       <div>
         <video src="../../mp4-folder/Grenscreen-video-eksame.mp4" controls></video>
-        <p>Når man arbejder med video, kan man opleve at man skal bruge en greenscreen for at lave diverse scener. Premiere pro har en effekt der kan hjælpe dig med dette, som vi viser dig og forklare i denne video.</p>
+
+        <!-- Description of video -->
+        <p>
+          Når man arbejder med video, kan man opleve at man skal bruge en greenscreen
+          for at lave diverse scener. Premiere Pro har en effekt der kan hjælpe dig
+          med dette, som vi viser dig og forklarer i denne video.
+        </p>
       </div>
+
     </main>
-        <section>
-        <div><p>Det er vigtigt at have kendskab til Premiere Pro, da det er et centralt værktøj i videoproduktion. Premiere Pro er også god til at lave forskellige effekter og redigeringer af videoer.</p></div>
+
+    <!-- INFO SECTION -->
+    <section>
+      <div>
+        <p>
+          Det er vigtigt at have kendskab til Premiere Pro, da det er et centralt
+          værktøj i videoproduktion. Premiere Pro er også god til at lave forskellige
+          effekter og redigeringer af videoer.
+        </p>
+      </div>
     </section>
+
+    <!-- QUIZ SECTION -->
     <section class="container-q">
-        <div class="left">
 
-            <h1>
-                Velkommen til <br>
-                <span>Video Quiz!</span>
-            </h1>
+      <!-- LEFT SIDE INTRO TEXT -->
+      <div class="left">
 
-            <p>
-                Vælg emne for at starte.
-            </p>
+        <h1>
+          Velkommen til <br>
+          <span>Video Quiz!</span>
+        </h1>
 
+        <p>
+          Vælg emne for at starte.
+        </p>
+
+      </div>
+
+      <!-- RIGHT SIDE (quiz start card) -->
+      <div class="right">
+
+        <!-- Quiz category button -->
+        <div class="card" onclick="startQuiz('premier_pro')">
+          <div class="icon premier_pro">⌨</div>
+          <h2>premier pro</h2>
         </div>
 
-        <div class="right">
+      </div>
 
-            <div class="card" onclick="startQuiz('premier_pro')">
-                <div class="icon premier_pro">⌨</div>
-                <h2>premier pro</h2>
-            </div>
+      <!-- QUIZ SCREEN (hidden until activated) -->
+      <div class="quiz-screen">
+
+        <!-- Quiz title -->
+        <h1 class="quiz-title"></h1>
+
+        <!-- Question text -->
+        <div class="question"></div>
+
+        <!-- Answer options -->
+        <div class="answers"></div>
+
+        <!-- Next question button -->
+        <button class="next-btn" onclick="nextQuestion()">
+          Næste Spørgsmål
+        </button>
+
+      </div>
+
+      <!-- RESULT SCREEN (shown after quiz ends) -->
+      <div class="result-screen">
+
+        <!-- Score circle -->
+        <div class="result-circle">
+          <span id="score-percent">0%</span>
         </div>
 
-        <!-- QUIZ SCREEN -->
+        <!-- Completion text -->
+        <h1>Quiz Gennemført!</h1>
 
-        <div class="quiz-screen">
+        <!-- Score message -->
+        <p id="score-text"></p>
 
-            <h1 class="quiz-title"></h1>
+        <!-- Wrong answers list -->
+        <div id="wrong-answers"></div>
 
-            <div class="question"></div>
+        <!-- Restart quiz -->
+        <button class="restart-btn" onclick="location.reload()">
+          Prøv Igen
+        </button>
 
-            <div class="answers"></div>
-
-            <button class="next-btn" onclick="nextQuestion()">
-                Næste Spørgsmål
-            </button>
-
-        </div>
-
-        <!-- RESULT SCREEN -->
-
-        <div class="result-screen">
-
-            <div class="result-circle">
-                <span id="score-percent">0%</span>
-            </div>
-
-            <h1>Quiz Gennemført!</h1>
-
-            <p id="score-text"></p>
-
-            <div id="wrong-answers"></div>
-
-            <button class="restart-btn" onclick="location.reload()">
-                Prøv Igen
-            </button>
-
-        </div>
-
-    </div>
+      </div>
 
     </section>
+
   </body>
 </html>

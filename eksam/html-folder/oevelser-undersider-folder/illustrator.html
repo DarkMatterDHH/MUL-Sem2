@@ -1,52 +1,145 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
+    <!-- Basic setup -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- JavaScript -->
     <script src="../../js-folder/script.js" defer></script>
+    <script src="js-quiz/quiz.js" defer></script>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../../css-folder/style.css" />
     <link rel="stylesheet" href="../../css-folder/oevelser-undersider.css" />
     <link rel="stylesheet" href="../../css-folder/quiz.css" />
-    <script src="js-quiz/quiz.js" defer></script>
+
     <title>Illustrator</title>
-  </head>
-  <body>
+</head>
+
+<body>
+
+    <!-- HEADER -->
     <header>
-        <a href="../../index.html"><div><img src="#" alt=""><h3>HOW TO BE <BR>MULTIMEDIEDESIGNER</BR></h3></div></a>
-        <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
-        <svg width="100" height="100" viewBox="0 0 100 100">
-        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-        <path class="line line2" d="M 20,50 H 80" />
-        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-      </svg>
-    </button>
+
+        <!-- Logo + link to homepage -->
+        <a href="../../index.html">
+            <div>
+                <img src="#" alt="">
+                <h3>
+                    HOW TO BE <br>
+                    MULTIMEDIEDESIGNER
+                </h3>
+            </div>
+        </a>
+
+        <!-- Burger menu button -->
+        <button 
+            class="menu"
+            onclick="this.classList.toggle('opened');
+            this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+            aria-label="Main Menu">
+
+            <!-- Animated burger icon -->
+            <svg width="100" height="100" viewBox="0 0 100 100">
+
+                <path class="line line1"
+                    d="M 20,29.000046 H 80.000231 
+                    C 80.000231,29.000046 94.498839,28.817352 
+                    94.532987,66.711331 
+                    94.543142,77.980673 90.966081,81.670246 
+                    85.259173,81.668997 
+                    79.552261,81.667751 75.000211,74.999942 
+                    75.000211,74.999942 
+                    L 25.000021,25.000058" />
+
+                <path class="line line2" d="M 20,50 H 80" />
+
+                <path class="line line3"
+                    d="M 20,70.999954 H 80.000231 
+                    C 80.000231,70.999954 94.498839,71.182648 
+                    94.532987,33.288669 
+                    94.543142,22.019327 90.966081,18.329754 
+                    85.259173,18.331003 
+                    79.552261,18.332249 75.000211,25.000058 
+                    75.000211,25.000058 
+                    L 25.000021,74.999942" />
+
+            </svg>
+        </button>
+
     </header>
+
+    <!-- NAVIGATION MENU -->
     <nav class="burger off-screen">
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <!-- arrow down symbol &#128899. arrow up symbol &#128897  -->
-                <li><a href="../oevelser.html">Øvelser</a><a class="arrow">&#128899</a></li>
-                <li><a href="../ord-bog.html">Ordbog</a></li>
-            </ul>
-        </nav>
-        <nav class="oevelser off-screen">
-            <ul>
-                <li><a href="photoshop.html">Photoshop</a></li>
-                <li><a href="premier-pro.html">Premier Pro</a></li>
-                <li><p>Illustrator</p></li>
-                <li><a href="visual-code.html">Visual Code</a></li>
-            </ul>
-        </nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+
+            <li>
+                <a href="../oevelser.html">Øvelser</a>
+                <a class="arrow">&#128899</a>
+            </li>
+
+            <li><a href="../ord-bog.html">Ordbog</a></li>
+        </ul>
+    </nav>
+
+    <!-- SUB NAVIGATION -->
+    <nav class="oevelser off-screen">
+        <ul>
+
+            <li><a href="photoshop.html">Photoshop</a></li>
+            <li><a href="premier-pro.html">Premier Pro</a></li>
+
+            <!-- Active page -->
+            <li><p>Illustrator</p></li>
+
+            <li><a href="visual-code.html">Visual Code</a></li>
+        </ul>
+    </nav>
+
+    <!-- PAGE TITLE -->
     <h2>Illustrator</h2>
+
+    <!-- MAIN CONTENT -->
     <main class="illustrator">
-        <div><img src="../../img-folder/illu-1.png"></img> <p>...</p></div>
-        <div><img src="../../img-folder/illu-2.png"></img> <p>...</p></div>
-        <div><img src="../../img-folder/illu-3.png"></img> <p>...</p></div>
+
+        <!-- Image 1 -->
+        <div>
+            <img src="../../img-folder/illu-1.png">
+            <p>...</p>
+        </div>
+
+        <!-- Image 2 -->
+        <div>
+            <img src="../../img-folder/illu-2.png">
+            <p>...</p>
+        </div>
+
+        <!-- Image 3 -->
+        <div>
+            <img src="../../img-folder/illu-3.png">
+            <p>...</p>
+        </div>
+
     </main>
+
+    <!-- INFO SECTION -->
     <section>
-        <div><p>Det er vigtigt at have kendskab til Illustrator, da det er et centralt værktøj i designprocessen, især når det kommer til at arbejde med vektorgrafik. Illustrator er også god til at lave plakater og andre grafiske elementer.</p></div>
+        <div>
+            <p>
+                Det er vigtigt at have kendskab til Illustrator, da det er et centralt
+                værktøj i designprocessen, især når det kommer til at arbejde med
+                vektorgrafik. Illustrator er også god til at lave plakater og andre
+                grafiske elementer.
+            </p>
+        </div>
     </section>
-        <section class="container-q">
+
+    <!-- QUIZ SECTION -->
+    <section class="container-q">
+
+        <!-- INTRO LEFT SIDE -->
         <div class="left">
 
             <h1>
@@ -60,6 +153,7 @@
 
         </div>
 
+        <!-- QUIZ START BUTTON -->
         <div class="right">
 
             <div class="card" onclick="startQuiz('illustrator')">
@@ -69,8 +163,7 @@
 
         </div>
 
-        <!-- QUIZ SCREEN -->
-
+        <!-- QUIZ SCREEN (hidden until activated) -->
         <div class="quiz-screen">
 
             <h1 class="quiz-title"></h1>
@@ -86,7 +179,6 @@
         </div>
 
         <!-- RESULT SCREEN -->
-
         <div class="result-screen">
 
             <div class="result-circle">
@@ -105,9 +197,7 @@
 
         </div>
 
-    </div>
-
     </section>
 
-  </body>
+</body>
 </html>

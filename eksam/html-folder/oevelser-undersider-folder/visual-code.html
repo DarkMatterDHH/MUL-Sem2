@@ -1,53 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Tegnsæt og responsivt design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JavaScript filer -->
     <script src="../../js-folder/script.js" defer></script>
+    <script src="js-quiz/quiz.js"></script>
+
+    <!-- CSS filer -->
     <link rel="stylesheet" href="../../css-folder/style.css" />
     <link rel="stylesheet" href="../../css-folder/oevelser-undersider.css" />
     <link rel="stylesheet" href="../../css-folder/quiz.css" />
-    <script src="js-quiz/quiz.js"/></script>
+
+    <!-- Titel i browser-tab -->
     <title>Visual Studio Code</title>
 </head>
+
 <body>
+
+    <!-- HEADER -->
     <header>
-        <a href="../../index.html"><div><img src="#" alt=""><h3>HOW TO BE <BR>MULTIMEDIEDESIGNER</BR></h3></div></a>
-        <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
-        <svg width="100" height="100" viewBox="0 0 100 100">
-        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-        <path class="line line2" d="M 20,50 H 80" />
-        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-      </svg>
-    </button>
+
+        <!-- Logo + link til forsiden -->
+        <a href="../../index.html">
+            <div>
+                <img src="#" alt="">
+                <h3>
+                    HOW TO BE <br>
+                    MULTIMEDIEDESIGNER
+                </h3>
+            </div>
+        </a>
+
+        <!-- Burger menu knap -->
+        <button 
+            class="menu" 
+            onclick="this.classList.toggle('opened');
+            this.setAttribute('aria-expanded', this.classList.contains('opened'))" 
+            aria-label="Main Menu">
+
+            <!-- SVG ikon til burger menu -->
+            <svg width="100" height="100" viewBox="0 0 100 100">
+
+                <!-- Første linje -->
+                <path class="line line1"
+                    d="M 20,29.000046 H 80.000231 
+                    C 80.000231,29.000046 94.498839,28.817352 
+                    94.532987,66.711331 
+                    94.543142,77.980673 90.966081,81.670246 
+                    85.259173,81.668997 
+                    79.552261,81.667751 75.000211,74.999942 
+                    75.000211,74.999942 
+                    L 25.000021,25.000058" />
+
+                <!-- Midterste linje -->
+                <path class="line line2" d="M 20,50 H 80" />
+
+                <!-- Nederste linje -->
+                <path class="line line3"
+                    d="M 20,70.999954 H 80.000231 
+                    C 80.000231,70.999954 94.498839,71.182648 
+                    94.532987,33.288669 
+                    94.543142,22.019327 90.966081,18.329754 
+                    85.259173,18.331003 
+                    79.552261,18.332249 75.000211,25.000058 
+                    75.000211,25.000058 
+                    L 25.000021,74.999942" />
+            </svg>
+        </button>
     </header>
+
+    <!-- Navigation menu -->
     <nav class="burger off-screen">
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <!-- arrow down symbol &#128899. arrow up symbol &#128897  -->
-                <li><a href="../oevelser.html">Øvelser</a><a class="arrow">&#128899</a></li>
-                <li><a href="../ord-bog.html">Ordbog</a></li>
-            </ul>
-        </nav>
-        <nav class="oevelser off-screen">
-            <ul>
-                <li><a href="photoshop.html">Photoshop</a></li>
-                <li><a href="premier-pro.html">Premier Pro</a></li>
-                <li><a href="illustrator.html">Illustrator</a></li>
-                <li><p>Visual Code</p></li>
-            </ul>
-        </nav>
-        <h2>Visual Code</h2>
+        <ul>
+
+            <!-- Link til forside -->
+            <li><a href="../../index.html">Home</a></li>
+
+            <!-- Link til øvelser -->
+            <li>
+                <a href="../oevelser.html">Øvelser</a>
+                <a class="arrow">&#128899</a>
+            </li>
+
+            <!-- Link til ordbog -->
+            <li><a href="../ord-bog.html">Ordbog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Undermenu til programmer -->
+    <nav class="oevelser off-screen">
+        <ul>
+            <li><a href="photoshop.html">Photoshop</a></li>
+            <li><a href="premier-pro.html">Premier Pro</a></li>
+            <li><a href="illustrator.html">Illustrator</a></li>
+
+            <!-- Aktiv side -->
+            <li><p>Visual Code</p></li>
+        </ul>
+    </nav>
+
+    <!-- Side titel -->
+    <h2>Visual Code</h2>
+
+    <!-- MAIN INDHOLD -->
     <main>
-        <div><video src="../../mp4-folder/Htmlvideo.mp4"  controls></video> <br><p>hurtig intro til HTML</p></div>
-        <div><video src="../../mp4-folder/css-video.mp4"  controls></video> <br><p>hurtig intro til CSS</p></div>
-        <div><video src="../../mp4-folder/javascript.mp4" controls></video> <br><p>hurtig intro til JavaScript</p></div>
+
+        <!-- HTML video -->
+        <div>
+            <video src="../../mp4-folder/Htmlvideo.mp4" controls></video>
+            <br>
+            <p>hurtig intro til HTML</p>
+        </div>
+
+        <!-- CSS video -->
+        <div>
+            <video src="../../mp4-folder/css-video.mp4" controls></video>
+            <br>
+            <p>hurtig intro til CSS</p>
+        </div>
+
+        <!-- JavaScript video -->
+        <div>
+            <video src="../../mp4-folder/javascript.mp4" controls></video>
+            <br>
+            <p>hurtig intro til JavaScript</p>
+        </div>
+
     </main>
-        <section>
-        <div><p>Når man laver hjemmesider så er det vigtigt at have styr på HTML, CSS og JavaScript. det er grundlæggende teknologier, som alle webudviklere bør have viden om så det forstår hvad det er de laver.</p></div>
+
+    <!-- Informations sektion -->
+    <section>
+        <div>
+            <p>
+                Når man laver hjemmesider så er det vigtigt 
+                at have styr på HTML, CSS og JavaScript.
+                Det er grundlæggende teknologier, som alle 
+                webudviklere bør have viden om så de forstår 
+                hvad det er de laver.
+            </p>
+        </div>
     </section>
 
+    <!-- QUIZ SECTION -->
     <section class="container-q">
+
+        <!-- Venstre side -->
         <div class="left">
 
             <h1>
@@ -61,18 +161,22 @@
 
         </div>
 
+        <!-- Højre side med quiz kategorier -->
         <div class="right">
 
+            <!-- HTML quiz -->
             <div class="card" onclick="startQuiz('html')">
                 <div class="icon html">⌨</div>
                 <h2>HTML</h2>
             </div>
 
+            <!-- CSS quiz -->
             <div class="card" onclick="startQuiz('css')">
                 <div class="icon css">🎨</div>
                 <h2>CSS</h2>
             </div>
 
+            <!-- JavaScript quiz -->
             <div class="card" onclick="startQuiz('js')">
                 <div class="icon js">⚡</div>
                 <h2>JavaScript</h2>
@@ -81,43 +185,49 @@
         </div>
 
         <!-- QUIZ SCREEN -->
-
         <div class="quiz-screen">
 
+            <!-- Quiz titel -->
             <h1 class="quiz-title"></h1>
 
+            <!-- Spørgsmål -->
             <div class="question"></div>
 
+            <!-- Svar muligheder -->
             <div class="answers"></div>
 
+            <!-- Næste spørgsmål knap -->
             <button class="next-btn" onclick="nextQuestion()">
                 Næste Spørgsmål
             </button>
 
         </div>
 
-        <!-- RESULT SCREEN -->
-
+        <!-- RESULTAT SCREEN -->
         <div class="result-screen">
 
+            <!-- Cirkel med score -->
             <div class="result-circle">
                 <span id="score-percent">0%</span>
             </div>
 
+            <!-- Resultat tekst -->
             <h1>Quiz Gennemført!</h1>
 
+            <!-- Score tekst -->
             <p id="score-text"></p>
 
+            <!-- Forkerte svar -->
             <div id="wrong-answers"></div>
 
+            <!-- Genstart quiz -->
             <button class="restart-btn" onclick="location.reload()">
                 Prøv Igen
             </button>
 
         </div>
 
-    </div>
-
     </section>
+
 </body>
 </html>

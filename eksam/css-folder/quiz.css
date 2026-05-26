@@ -1,5 +1,6 @@
 /* BASE */
 
+/* Prevents horizontal scrolling and allows vertical scrolling */
 body {
   overflow-x: hidden;
   overflow-y: auto;
@@ -7,53 +8,74 @@ body {
 
 /* MAIN CONTAINER */
 
+/* Main quiz container */
 .containerq {
+  /* Responsive width */
   width: min(1200px, 95%);
+
+  /* Minimum height */
   min-height: 700px;
 
+  /* Background color */
   background: var(--Primær);
 
+  /* Rounded corners */
   border-radius: 30px;
 
+  /* Inner spacing */
   padding: 60px;
 
+  /* Flexbox layout */
   display: flex;
 
+  /* Space between left and right sections */
   gap: 80px;
 
+  /* Shadow effect */
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
 
+  /* Needed for absolute positioned quiz screens */
   position: relative;
 
+  /* Center container */
   margin: 40px auto;
 }
 
 /* LEFT SIDE */
 
+/* Left side content section */
 .left {
   margin-top: 40px;
   margin-bottom: 40px;
+
   flex: 1;
 
   display: flex;
   flex-direction: column;
+
   justify-content: center;
 }
 
+/* Main heading */
 .left h1 {
+  /* Responsive font size */
   font-size: clamp(40px, 6vw, 72px);
 
   line-height: 1.1;
 }
 
+/* Gradient text effect */
 .left span {
   background: linear-gradient(90deg, var(--Secundær), var(--Accent));
 
+  /* Clips background into text */
   -webkit-background-clip: text;
 
+  /* Makes text transparent so gradient is visible */
   color: transparent;
 }
 
+/* Paragraph styling */
 .left p {
   margin-top: 20px;
 
@@ -64,11 +86,13 @@ body {
 
 /* RIGHT SIDE */
 
+/* Right side card section */
 .right {
   flex: 1;
 
   display: flex;
   flex-direction: column;
+
   justify-content: center;
 
   gap: 25px;
@@ -76,6 +100,7 @@ body {
 
 /* SUBJECT CARDS */
 
+/* Quiz category cards */
 .card {
   background: var(--Primær);
 
@@ -93,12 +118,14 @@ body {
   transition: 0.3s;
 }
 
+/* Hover animation for cards */
 .card:hover {
   transform: translateY(-5px);
 
   box-shadow: 0 0 20px rgba(140, 100, 255, 0.5);
 }
 
+/* Card icon styling */
 .icon {
   width: 70px;
   height: 70px;
@@ -114,6 +141,7 @@ body {
   font-size: 32px;
 }
 
+/* Background color for icons */
 .html,
 .css,
 .js,
@@ -121,47 +149,59 @@ body {
   background: var(--baggrund);
 }
 
+/* Card title */
 .card h2 {
   font-size: clamp(22px, 3vw, 30px);
 
+  /* Prevents text overflow */
   word-break: break-word;
 }
 
 /* QUIZ SCREEN */
 
+/* Quiz overlay screen */
 .quiz-screen {
   position: absolute;
+
+  /* Covers the entire container */
   inset: 0;
 
   background: var(--Primær);
 
   padding: 60px;
 
+  /* Hidden by default */
   display: none;
 
   flex-direction: column;
+
   justify-content: center;
 
   overflow-y: auto;
 }
 
+/* Makes quiz visible */
 .quiz-screen.active {
   display: flex;
 }
 
+/* Quiz title */
 .quiz-title {
   font-size: clamp(30px, 5vw, 50px);
 
   margin-bottom: 30px;
 }
 
+/* Question text */
 .question {
   font-size: clamp(22px, 4vw, 30px);
+
   color: var(--Accent);
 
   margin-bottom: 30px;
 }
 
+/* Answer container */
 .answers {
   display: flex;
   flex-direction: column;
@@ -169,6 +209,7 @@ body {
   gap: 20px;
 }
 
+/* Answer boxes */
 .answer {
   background: var(--Secundær);
 
@@ -183,16 +224,19 @@ body {
   font-size: clamp(16px, 2vw, 20px);
 }
 
+/* Hover effect on answers */
 .answer:hover {
   transform: translateX(5px);
 }
 
+/* Selected answer styling */
 .answer.selected {
   border: 3px solid var(--Accent);
 }
 
 /* BUTTON */
 
+/* Next question button */
 .next-btn {
   margin-top: 40px;
 
@@ -216,6 +260,7 @@ body {
   transition: 0.3s;
 }
 
+/* Hover effect for button */
 .next-btn:hover {
   transform: scale(1.05);
 
@@ -224,15 +269,19 @@ body {
 
 /* RESULT SCREEN */
 
+/* Result overlay screen */
 .result-screen {
   position: absolute;
+
   inset: 0;
 
   background: var(--Primær);
 
+  /* Hidden by default */
   display: none;
 
   flex-direction: column;
+
   justify-content: center;
   align-items: center;
 
@@ -243,10 +292,12 @@ body {
   overflow-y: auto;
 }
 
+/* Makes result screen visible */
 .result-screen.active {
   display: flex;
 }
 
+/* Circular score progress */
 .result-circle {
   width: 220px;
   height: 220px;
@@ -260,6 +311,7 @@ body {
   font-size: 50px;
   font-weight: bold;
 
+  /* Circular gradient progress */
   background: conic-gradient(#8b5cf6 var(--progress), #3b4664 0deg);
 
   position: relative;
@@ -267,6 +319,7 @@ body {
   box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
 }
 
+/* Inner circle */
 .result-circle::before {
   content: "";
 
@@ -280,12 +333,14 @@ body {
   border-radius: 50%;
 }
 
+/* Score text */
 .result-circle span {
   position: relative;
 
   z-index: 2;
 }
 
+/* Wrong answers container */
 #wrong-answers {
   width: 100%;
   max-width: 600px;
@@ -293,6 +348,7 @@ body {
   margin-top: 20px;
 }
 
+/* Individual wrong answer box */
 .wrong-item {
   background: var(--Primær);
 
@@ -303,10 +359,12 @@ body {
   margin-bottom: 15px;
 }
 
+/* Wrong answer heading */
 .wrong-item h3 {
   color: #ff7b7b;
 }
 
+/* Restart button */
 .restart-btn {
   margin-top: 20px;
 
@@ -325,9 +383,10 @@ body {
   cursor: pointer;
 }
 
-/* TABLET */
+/* TABLET RESPONSIVE */
 
 @media (max-width: 992px) {
+  /* Stack sections vertically */
   .containerq {
     flex-direction: column;
 
@@ -338,20 +397,23 @@ body {
     gap: 50px;
   }
 
+  /* Full width sections */
   .left,
   .right {
     width: 100%;
   }
 
+  /* Smaller padding */
   .quiz-screen,
   .result-screen {
     padding: 40px;
   }
 }
 
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 
 @media (max-width: 600px) {
+  /* Smaller mobile container */
   .containerq {
     width: 95%;
 
@@ -362,20 +424,24 @@ body {
     gap: 30px;
   }
 
+  /* Smaller heading */
   .left h1 {
     font-size: 42px;
   }
 
+  /* Smaller paragraph */
   .left p {
     font-size: 16px;
   }
 
+  /* Smaller cards */
   .card {
     padding: 18px;
 
     gap: 15px;
   }
 
+  /* Smaller icons */
   .icon {
     width: 55px;
     height: 55px;
@@ -385,23 +451,28 @@ body {
     font-size: 24px;
   }
 
+  /* Smaller card title */
   .card h2 {
     font-size: 22px;
   }
 
+  /* Smaller padding */
   .quiz-screen,
   .result-screen {
     padding: 25px;
   }
 
+  /* Smaller question text */
   .question {
     font-size: 22px;
   }
 
+  /* Smaller answer boxes */
   .answer {
     padding: 18px;
   }
 
+  /* Smaller result circle */
   .result-circle {
     width: 170px;
     height: 170px;
@@ -409,14 +480,17 @@ body {
     font-size: 38px;
   }
 
+  /* Smaller inner circle */
   .result-circle::before {
     width: 130px;
     height: 130px;
   }
 
+  /* Full width buttons on mobile */
   .restart-btn,
   .next-btn {
     width: 100%;
+
     max-width: none;
   }
 }
