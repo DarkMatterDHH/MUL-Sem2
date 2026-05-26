@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../js-folder/script.js" defer></script>
+    <link rel="stylesheet" href="../../css-folder/style.css" />
+    <link rel="stylesheet" href="../../css-folder/oevelser-undersider.css" />
+    <link rel="stylesheet" href="../../css-folder/quiz.css" />
+    <script src="js-quiz/quiz.js" defer></script>
+    <title>Illustrator</title>
+  </head>
+  <body>
+    <header>
+        <a href="../../index.html"><div><img src="#" alt=""><h3>HOW TO BE <BR>MULTIMEDIEDESIGNER</BR></h3></div></a>
+        <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+        <path class="line line2" d="M 20,50 H 80" />
+        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+      </svg>
+    </button>
+    </header>
+    <nav class="burger off-screen">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <!-- arrow down symbol &#128899. arrow up symbol &#128897  -->
+                <li><a href="../oevelser.html">Øvelser</a><a class="arrow">&#128899</a></li>
+                <li><a href="../ord-bog.html">Ordbog</a></li>
+            </ul>
+        </nav>
+        <nav class="oevelser off-screen">
+            <ul>
+                <li><a href="photoshop.html">Photoshop</a></li>
+                <li><a href="premier-pro.html">Premier Pro</a></li>
+                <li><p>Illustrator</p></li>
+                <li><a href="visual-code.html">Visual Code</a></li>
+            </ul>
+        </nav>
+    <h2>Illustrator</h2>
+    <main class="illustrator">
+        <div><img src="../../img-folder/illu-1.png"></img> <p>...</p></div>
+        <div><img src="../../img-folder/illu-2.png"></img> <p>...</p></div>
+        <div><img src="../../img-folder/illu-3.png"></img> <p>...</p></div>
+    </main>
+    <section>
+        <div><p>Det er vigtigt at have kendskab til Illustrator, da det er et centralt værktøj i designprocessen, især når det kommer til at arbejde med vektorgrafik. Illustrator er også god til at lave plakater og andre grafiske elementer.</p></div>
+    </section>
+        <section class="container-q">
+        <div class="left">
+
+            <h1>
+                Velkommen til <br>
+                <span>Illustrator Quiz!</span>
+            </h1>
+
+            <p>
+                Vælg emne for at starte.
+            </p>
+
+        </div>
+
+        <div class="right">
+
+            <div class="card" onclick="startQuiz('illustrator')">
+                <div class="icon illustrator">⌨</div>
+                <h2>illustrator</h2>
+            </div>
+
+        </div>
+
+        <!-- QUIZ SCREEN -->
+
+        <div class="quiz-screen">
+
+            <h1 class="quiz-title"></h1>
+
+            <div class="question"></div>
+
+            <div class="answers"></div>
+
+            <button class="next-btn" onclick="nextQuestion()">
+                Næste Spørgsmål
+            </button>
+
+        </div>
+
+        <!-- RESULT SCREEN -->
+
+        <div class="result-screen">
+
+            <div class="result-circle">
+                <span id="score-percent">0%</span>
+            </div>
+
+            <h1>Quiz Gennemført!</h1>
+
+            <p id="score-text"></p>
+
+            <div id="wrong-answers"></div>
+
+            <button class="restart-btn" onclick="location.reload()">
+                Prøv Igen
+            </button>
+
+        </div>
+
+    </div>
+
+    </section>
+
+  </body>
+</html>

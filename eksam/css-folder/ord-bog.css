@@ -1,0 +1,54 @@
+body {
+  display: grid;
+
+  grid-template-areas:
+    "header"
+    "title"
+    "main";
+
+  gap: 20px;
+}
+header {
+  grid-area: header;
+}
+
+h2 {
+  grid-area: title;
+  text-align: center;
+}
+
+/* header */
+header {
+  grid-area: header;
+}
+
+/* title */
+h2 {
+  grid-area: title;
+  text-align: center;
+}
+
+/* main */
+main {
+  grid-area: main;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 20px;
+  width: 100%;
+}
+
+/* boxes */
+.text1,
+.text2,
+.text3 {
+  min-height: 200px;
+  border: 2px solid black;
+  background-color: lightgray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js-folder/script.js" defer></script>
+    <link rel="stylesheet" href="../../css-folder/style.css" />
+    <link rel="stylesheet" href="../../css-folder/oevelser-undersider.css "/>
+    <link rel="stylesheet" href="../../css-folder/quiz.css" />
+    <script src="js-quiz/quiz.js" defer></script>
+    <title>Photoshop</title>
+</head>
+<body>
+    <header>
+        <a href="../../index.html"><div><img src="#" alt=""><h3>HOW TO BE <BR>MULTIMEDIEDESIGNER</BR></h3></div></a>
+        <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+        <path class="line line2" d="M 20,50 H 80" />
+        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+      </svg>
+    </button>
+    </header>
+    <nav class="burger off-screen">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <!-- arrow down symbol &#128899. arrow up symbol &#128897  -->
+                <li><a href="../oevelser.html">Øvelser</a><a class="arrow">&#128899</a></li>
+                <li><a href="../ord-bog.html">Ordbog</a></li>
+            </ul>
+        </nav>
+        <nav class="oevelser off-screen">
+            <ul>
+                <li><a>Photoshop</a></li>
+                <li><a href="premier-pro.html">Premier Pro</a></li>
+                <li><a href="illustrator.html">Illustrator</a></li>
+                <li><a href="visual-code.html">Visual Code</a></li>
+            </ul>
+        </nav>
+    <h2>Photoshop</h2>
+    <main>
+        <div><video src="../../mp4-folder/Video-photoshop-uden-videoDONE.mp4" controls></video> <br> <p>Hvordan fjerner man baggrunden fra et billede i Photoshop</p></div>
+        <div><video src="../../mp4-folder/Tryllestav-værktøj.mp4" controls></video> <br> <p>Hvordan Fjerner ting fra billeder i Photoshop</p></div>
+        <div><video src="../../mp4-folder/Scene-Crayon-Starter-2.mp4" controls></video> <br> <p>Hvordan man kan ændre tekst til et billede i forhold til farve i Photoshop</p></div>
+    </main>
+        <section>
+        <div><p>For at kunne blive god til at designe hjemmesider kan det være en fordel at have kendskab til Photoshop, da det er et vigtigt værktøj til at skabe og redigere billeder.</p></div>
+    </section>
+        <section class="container-q">
+        <div class="left">
+
+            <h1>
+                Velkommen til <br>
+                <span>Photoshop Quiz!</span>
+            </h1>
+
+            <p>
+                Vælg emne for at starte.
+            </p>
+
+        </div>
+
+        <div class="right">
+
+            <div class="card" onclick="startQuiz('photoshop')">
+                <div class="icon photoshop">⌨</div>
+                <h2>photoshop</h2>
+            </div>
+
+            <div class="card" onclick="startQuiz('photoshop_værktøjer')">
+                <div class="icon photoshop">🎨</div>
+                <h2>værktøjer</h2>
+            </div>
+        </div>
+
+        <!-- QUIZ SCREEN -->
+
+        <div class="quiz-screen">
+
+            <h1 class="quiz-title"></h1>
+
+            <div class="question"></div>
+
+            <div class="answers"></div>
+
+            <button class="next-btn" onclick="nextQuestion()">
+                Næste Spørgsmål
+            </button>
+
+        </div>
+
+        <!-- RESULT SCREEN -->
+
+        <div class="result-screen">
+
+            <div class="result-circle">
+                <span id="score-percent">0%</span>
+            </div>
+
+            <h1>Quiz Gennemført!</h1>
+
+            <p id="score-text"></p>
+
+            <div id="wrong-answers"></div>
+
+            <button class="restart-btn" onclick="location.reload()">
+                Prøv Igen
+            </button>
+
+        </div>
+
+    </div>
+
+    </section>
+
+</body>
+</html>

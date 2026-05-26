@@ -1,0 +1,22 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "vid"
+    "text";
+}
+
+header {
+  grid-area: header;
+}
+
+video {
+  grid-area: vid;
+}
+
+.main-text {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

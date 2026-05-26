@@ -1,0 +1,49 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    "tittle tittle"
+    "photoshop premier-pro"
+    "visual-code illustrator";
+  gap: 20px;
+}
+
+h1 {
+  grid-area: tittle;
+  text-align: center;
+}
+.photoshop {
+  grid-area: photoshop;
+  display: flex;
+  justify-content: center;
+}
+.premier-pro {
+  grid-area: premier-pro;
+  display: flex;
+  justify-content: center;
+}
+.illustrator {
+  grid-area: illustrator;
+  display: flex;
+  justify-content: center;
+}
+.visual-code {
+  grid-area: visual-code;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 150px;
+}
